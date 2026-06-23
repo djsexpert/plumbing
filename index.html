@@ -12,7 +12,7 @@ body{
   margin:0;
   font-family:Arial,sans-serif;
   background:#eef0ea;
-  color:#18212d;
+  color:#17212d;
 }
 
 .topbar{
@@ -37,18 +37,18 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 20px;
+  padding:18px 24px;
 }
 
 .logo{
-  height:110px;
-  width:auto;
-  max-width:78%;
-  object-fit:contain;
+  width:72%;
+  max-width:520px;
+  height:auto;
+  display:block;
 }
 
 .menu-btn{
-  font-size:42px;
+  font-size:44px;
   color:#18aee5;
   background:none;
   border:none;
@@ -60,11 +60,11 @@ nav{
   position:fixed;
   right:0;
   top:0;
-  width:75%;
+  width:78%;
   height:100%;
   background:#17212d;
   z-index:2000;
-  padding:60px 35px;
+  padding:55px 35px;
 }
 
 nav a{
@@ -75,25 +75,21 @@ nav a{
   margin:28px 0;
 }
 
-nav a:hover{
-  color:#18aee5;
-}
-
 .close{
   color:white;
-  font-size:45px;
+  font-size:48px;
   text-align:right;
   cursor:pointer;
 }
 
 .hero{
   background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),
     url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7');
   background-size:cover;
   background-position:center;
   color:white;
-  padding:90px 7%;
+  padding:95px 7%;
 }
 
 .hero h1{
@@ -110,7 +106,7 @@ nav a:hover{
   display:inline-block;
   background:#18aee5;
   color:white;
-  padding:18px 32px;
+  padding:18px 34px;
   border-radius:40px;
   text-decoration:none;
   font-size:20px;
@@ -122,14 +118,8 @@ section{
   padding:70px 7%;
 }
 
-.dark{
-  background:#17212d;
-  color:white;
-}
-
-.white{
-  background:white;
-}
+.white{background:white}
+.dark{background:#17212d;color:white}
 
 h2{
   font-size:38px;
@@ -144,22 +134,23 @@ p{
 .cards{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:20px;
+  gap:22px;
 }
 
 .card{
   background:white;
-  padding:25px;
+  padding:28px;
   border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.dark .card{
-  color:#18212d;
+  box-shadow:0 5px 22px rgba(0,0,0,.08);
 }
 
 .card h3{
   color:#18aee5;
+  font-size:24px;
+}
+
+.dark .card{
+  color:#17212d;
 }
 
 form{
@@ -177,7 +168,7 @@ label{
 
 input,textarea{
   width:100%;
-  padding:14px;
+  padding:15px;
   margin-top:8px;
   border:1px solid #ccc;
   border-radius:6px;
@@ -204,9 +195,10 @@ textarea{
 .footerbar a{
   background:#18aee5;
   color:white;
-  padding:14px 24px;
+  padding:14px 28px;
   border-radius:35px;
   text-decoration:none;
+  font-size:18px;
 }
 
 footer{
@@ -214,21 +206,29 @@ footer{
   color:white;
   text-align:center;
   padding:30px;
-  margin-bottom:70px;
+  margin-bottom:75px;
 }
 
 @media(max-width:600px){
+  .header-inner{
+    padding:18px 18px;
+  }
+
   .logo{
-    height:95px;
-    max-width:75%;
+    width:74%;
+    max-width:none;
+  }
+
+  .menu-btn{
+    font-size:42px;
   }
 
   .hero h1{
-    font-size:40px;
+    font-size:42px;
   }
 
-  nav{
-    width:78%;
+  .hero p{
+    font-size:20px;
   }
 }
 </style>
