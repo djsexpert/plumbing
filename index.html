@@ -7,38 +7,230 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#eef0ea;color:#18212d}
-.topbar{background:#18aee5;color:white;text-align:center;padding:10px;font-size:16px}
-header{background:#17212d;padding:22px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-.logo{height:70px}
-.menu-btn{font-size:38px;color:#18aee5;background:none;border:0}
-nav{display:none;position:fixed;right:0;top:0;width:75%;height:100%;background:#17212d;z-index:99;padding:60px 35px}
-nav a{display:block;color:white;text-decoration:none;font-size:24px;margin:28px 0}
-nav a:hover{color:#18aee5}
-.close{color:white;font-size:45px;text-align:right;cursor:pointer}
 
-.hero{background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7');background-size:cover;background-position:center;color:white;padding:90px 7%}
-.hero h1{font-size:48px;margin:0 0 25px}
-.hero p{font-size:22px;line-height:1.5}
-.btn{display:inline-block;background:#18aee5;color:white;padding:18px 32px;border-radius:40px;text-decoration:none;font-size:20px;margin-top:20px;border:0}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#eef0ea;
+  color:#18212d;
+}
 
-section{padding:70px 7%}
-.dark{background:#17212d;color:white}
-.white{background:white}
-h2{font-size:38px;margin-top:0}
-p{font-size:18px;line-height:1.6}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.card{background:white;padding:25px;border-radius:18px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
-.dark .card{color:#18212d}
-.card h3{color:#18aee5}
+.topbar{
+  background:#18aee5;
+  color:white;
+  text-align:center;
+  padding:10px;
+  font-size:16px;
+}
 
-form{background:white;padding:30px;border-radius:18px}
-label{display:block;margin-top:18px;font-weight:bold;color:#5d6670}
-input,textarea{width:100%;padding:14px;margin-top:8px;border:1px solid #ccc;border-radius:6px;font-size:16px}
-textarea{height:140px}
-.footerbar{position:fixed;bottom:0;left:0;right:0;background:white;padding:12px;display:flex;justify-content:space-around;z-index:20;box-shadow:0 -5px 20px rgba(0,0,0,.12)}
-.footerbar a{background:#18aee5;color:white;padding:14px 24px;border-radius:35px;text-decoration:none}
-footer{background:#111;color:white;text-align:center;padding:30px;margin-bottom:70px}
+header{
+  background:#17212d;
+  width:100%;
+  padding:0;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.header-inner{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+.logo{
+  height:110px;
+  width:auto;
+  max-width:78%;
+  object-fit:contain;
+}
+
+.menu-btn{
+  font-size:42px;
+  color:#18aee5;
+  background:none;
+  border:none;
+  cursor:pointer;
+}
+
+nav{
+  display:none;
+  position:fixed;
+  right:0;
+  top:0;
+  width:75%;
+  height:100%;
+  background:#17212d;
+  z-index:2000;
+  padding:60px 35px;
+}
+
+nav a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  font-size:24px;
+  margin:28px 0;
+}
+
+nav a:hover{
+  color:#18aee5;
+}
+
+.close{
+  color:white;
+  font-size:45px;
+  text-align:right;
+  cursor:pointer;
+}
+
+.hero{
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1585704032915-c3400ca199e7');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:90px 7%;
+}
+
+.hero h1{
+  font-size:48px;
+  margin:0 0 25px;
+}
+
+.hero p{
+  font-size:22px;
+  line-height:1.5;
+}
+
+.btn{
+  display:inline-block;
+  background:#18aee5;
+  color:white;
+  padding:18px 32px;
+  border-radius:40px;
+  text-decoration:none;
+  font-size:20px;
+  margin-top:20px;
+  border:0;
+}
+
+section{
+  padding:70px 7%;
+}
+
+.dark{
+  background:#17212d;
+  color:white;
+}
+
+.white{
+  background:white;
+}
+
+h2{
+  font-size:38px;
+  margin-top:0;
+}
+
+p{
+  font-size:18px;
+  line-height:1.6;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.dark .card{
+  color:#18212d;
+}
+
+.card h3{
+  color:#18aee5;
+}
+
+form{
+  background:white;
+  padding:30px;
+  border-radius:18px;
+}
+
+label{
+  display:block;
+  margin-top:18px;
+  font-weight:bold;
+  color:#5d6670;
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin-top:8px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:16px;
+}
+
+textarea{
+  height:140px;
+}
+
+.footerbar{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:white;
+  padding:12px;
+  display:flex;
+  justify-content:space-around;
+  z-index:1500;
+  box-shadow:0 -5px 20px rgba(0,0,0,.12);
+}
+
+.footerbar a{
+  background:#18aee5;
+  color:white;
+  padding:14px 24px;
+  border-radius:35px;
+  text-decoration:none;
+}
+
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-bottom:70px;
+}
+
+@media(max-width:600px){
+  .logo{
+    height:95px;
+    max-width:75%;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  nav{
+    width:78%;
+  }
+}
 </style>
 </head>
 
@@ -47,8 +239,10 @@ footer{background:#111;color:white;text-align:center;padding:30px;margin-bottom:
 <div class="topbar">Professional Plumbing & Gasfitting Services</div>
 
 <header>
-  <img src="logo.PNG" class="logo" alt="DJS Expert Plumbing Logo">
-  <button class="menu-btn" onclick="openMenu()">☰</button>
+  <div class="header-inner">
+    <img src="logo.PNG" class="logo" alt="DJS Expert Plumbing Logo">
+    <button class="menu-btn" onclick="openMenu()">☰</button>
+  </div>
 </header>
 
 <nav id="menu">
@@ -70,10 +264,22 @@ footer{background:#111;color:white;text-align:center;padding:30px;margin-bottom:
 <section id="residential" class="white">
   <h2>Residential Plumbing Services</h2>
   <p>Professional plumbing services for homes, bathrooms, kitchens, hot water systems and general maintenance.</p>
+
   <div class="cards">
-    <div class="card"><h3>Water Installation</h3><p>Water installation and maintenance for residential properties.</p></div>
-    <div class="card"><h3>Hot Water Systems</h3><p>Hot water system installation and service enquiries.</p></div>
-    <div class="card"><h3>Renovations</h3><p>Plumbing support for renovations and new homes.</p></div>
+    <div class="card">
+      <h3>Water Installation</h3>
+      <p>Water installation and maintenance for residential properties.</p>
+    </div>
+
+    <div class="card">
+      <h3>Hot Water Systems</h3>
+      <p>Hot water system installation and service enquiries.</p>
+    </div>
+
+    <div class="card">
+      <h3>Renovations</h3>
+      <p>Plumbing support for renovations and new homes.</p>
+    </div>
   </div>
 </section>
 
@@ -86,10 +292,22 @@ footer{background:#111;color:white;text-align:center;padding:30px;margin-bottom:
 <section id="rental" class="white">
   <h2>Rental Property & Maintenance</h2>
   <p>Support for rental properties, maintenance work, tanks, rainwater systems and general plumbing issues.</p>
+
   <div class="cards">
-    <div class="card"><h3>General Maintenance</h3><p>General roofing and maintenance enquiries.</p></div>
-    <div class="card"><h3>Gas Fitting</h3><p>Professional gasfitting services.</p></div>
-    <div class="card"><h3>Rainwater Systems</h3><p>Tanks and rainwater system plumbing support.</p></div>
+    <div class="card">
+      <h3>General Maintenance</h3>
+      <p>General roofing and maintenance enquiries.</p>
+    </div>
+
+    <div class="card">
+      <h3>Gas Fitting</h3>
+      <p>Professional gasfitting services.</p>
+    </div>
+
+    <div class="card">
+      <h3>Rainwater Systems</h3>
+      <p>Tanks and rainwater system plumbing support.</p>
+    </div>
   </div>
 </section>
 
@@ -136,8 +354,13 @@ footer{background:#111;color:white;text-align:center;padding:30px;margin-bottom:
 </footer>
 
 <script>
-function openMenu(){document.getElementById("menu").style.display="block"}
-function closeMenu(){document.getElementById("menu").style.display="none"}
+function openMenu(){
+  document.getElementById("menu").style.display="block";
+}
+
+function closeMenu(){
+  document.getElementById("menu").style.display="none";
+}
 </script>
 
 </body>
